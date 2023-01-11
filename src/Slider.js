@@ -1,18 +1,18 @@
 /* eslint-disable jsx-a11y/img-redundant-alt */
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import React from "react";
-import image3 from "./images/Slide1-1.JPG";
-import image4 from "./images/Slide2-1.JPG";
+import image3 from "./images/Latest.JPG";
+import image4 from "./images/Latest2.JPG";
 import "./App.css";
 
 const Slider = () => {
   const options = {
     // type: "fade",
     type: "loop",
-    rewind: true,
+    // rewind: true,
     gap: "1rem",
     autoplay: true,
-    pauseOnHover: true,
+    pauseOnHover: false,
     resetProgress: false,
     height: "100vh",
     pagination: false,
