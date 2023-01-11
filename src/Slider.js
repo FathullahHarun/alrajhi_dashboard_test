@@ -1,8 +1,8 @@
 /* eslint-disable jsx-a11y/img-redundant-alt */
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import React from "react";
-import image3 from "./images/Latest.JPG";
-import image4 from "./images/Latest2.JPG";
+import image3 from "./images/HighRes.PNG";
+import image4 from "./images/HighRes2.PNG";
 import "./App.css";
 
 const Slider = () => {
@@ -18,7 +18,7 @@ const Slider = () => {
     pagination: false,
     arrows: false,
     speed: 2000,
-    interval: 10000,
+    interval: 15000,
   };
 
   return (
