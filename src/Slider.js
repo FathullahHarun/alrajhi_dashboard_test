@@ -1,8 +1,8 @@
 /* eslint-disable jsx-a11y/img-redundant-alt */
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import React from "react";
-import image3 from "./images/friday.PNG";
-import image4 from "./images/friday2.PNG";
+import image3 from "./images/Slide1.PNG";
+import image4 from "./images/Slide2.PNG";
 import "./App.css";
 
 const Slider = () => {
