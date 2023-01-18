@@ -40,33 +40,16 @@ const Slider = () => {
   return (
     <div className="container">
       <Splide options={options} aria-label="My Favorite Images">
-        <SplideSlide>
-          {images && (
-            <img
-              className="slide"
-              src={urlFor(images[0].image).url()}
-              alt={images[0].title}
-            />
-          )}
-        </SplideSlide>
-        <SplideSlide>
-          {images && (
-            <img
-              className="slide"
-              src={urlFor(images[1].image).url()}
-              alt={images[1].title}
-            />
-          )}
-        </SplideSlide>
-        <SplideSlide>
-          {images && (
-            <img
-              className="slide"
-              src={urlFor(images[2].image).url()}
-              alt={images[2].title}
-            />
-          )}
-        </SplideSlide>
+        {images &&
+          images.map((image, index) => (
+            <SplideSlide key={index}>
+              <img
+                className="slide"
+                src={urlFor(image.image).url()}
+                alt={image.title}
+              />
+            </SplideSlide>
+          ))}
       </Splide>
     </div>
   );
