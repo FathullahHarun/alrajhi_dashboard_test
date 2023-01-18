@@ -1,8 +1,9 @@
 /* eslint-disable jsx-a11y/img-redundant-alt */
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import React from "react";
-import image3 from "./images/Slide1.PNG";
-import image4 from "./images/Slide2.PNG";
+import image1 from "./images/Slide1.PNG";
+import image2 from "./images/Slide2.PNG";
+import image3 from "./images/Slide3.PNG";
 import "./App.css";
 
 const Slider = () => {
@@ -25,10 +26,13 @@ const Slider = () => {
     <div className="container">
       <Splide options={options} aria-label="My Favorite Images">
         <SplideSlide>
-          <img className="slide" src={image3} alt="Picture 1" />
+          <img className="slide" src={image1} alt="Picture 1" />
         </SplideSlide>
         <SplideSlide>
-          <img className="slide" src={image4} alt="Picture 2" />
+          <img className="slide" src={image2} alt="Picture 2" />
+        </SplideSlide>
+        <SplideSlide>
+          <img className="slide" src={image3} alt="Picture 2" />
         </SplideSlide>
       </Splide>
     </div>
