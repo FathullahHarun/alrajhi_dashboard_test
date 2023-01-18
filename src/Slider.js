@@ -3,11 +3,16 @@ import { Splide, SplideSlide } from "@splidejs/react-splide";
 import React from "react";
 import { client, urlFor } from "./client";
 import { useEffect, useState } from "react";
+// import { Intersection } from "@splidejs/splide-extension-intersection";
 import "./App.css";
 
 const Slider = () => {
   const [images, setImages] = useState(null);
   const slides = `*[_type == "slides"]`;
+  // const [slide4, setSlide4] = useState(null);
+  images && images.sort((a, b) => (a._createdAt > b._createdAt ? 1 : -1));
+  // const firstSlide = images[0];
+  // const otherSlides = images.slice(1, images.length);
 
   const options = {
     // type: "fade",
@@ -33,23 +38,44 @@ const Slider = () => {
       .catch((err) => {
         console.log(err);
       });
-  }, [slides, images]);
 
-  images && images.sort((a, b) => (a._createdAt > b._createdAt ? 1 : -1));
+    // if (images) {
+    //   const slide4 = images.find((image) => image.name === "Slide 4");
+    //   setSlide4(slide4);
+    // }
+  }, [slides]);
+  // console.log(images);
 
   return (
     <div className="container">
       <Splide options={options} aria-label="My Favorite Images">
-        {images &&
-          images.map((image, index) => (
-            <SplideSlide key={index}>
-              <img
-                className="slide"
-                src={urlFor(image.image).url()}
-                alt={image.title}
-              />
-            </SplideSlide>
-          ))}
+        <SplideSlide>
+          {images && (
+            <img
+              className="slide"
+              src={urlFor(images[0].image).url()}
+              alt={images[0].title}
+            />
+          )}
+        </SplideSlide>
+        <SplideSlide>
+          {images && (
+            <img
+              className="slide"
+              src={urlFor(images[1].image).url()}
+              alt={images[1].title}
+            />
+          )}
+        </SplideSlide>
+        <SplideSlide>
+          {images && (
+            <img
+              className="slide"
+              src={urlFor(images[2].image).url()}
+              alt={images[2].title}
+            />
+          )}
+        </SplideSlide>
       </Splide>
     </div>
   );
