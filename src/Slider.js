@@ -33,7 +33,7 @@ const Slider = () => {
       .catch((err) => {
         console.log(err);
       });
-  }, [slides]);
+  }, [slides, images]);
 
   images && images.sort((a, b) => (a._createdAt > b._createdAt ? 1 : -1));
 
