@@ -44,7 +44,6 @@ const Slider = () => {
     //   setSlide4(slide4);
     // }
   }, [slides]);
-  // console.log(images);
 
   return (
     <div className="container">
@@ -76,6 +75,24 @@ const Slider = () => {
             />
           )}
         </SplideSlide>
+        <SplideSlide>
+          {images && (
+            <img
+              className="slide"
+              src={urlFor(images[3].image).url()}
+              alt={images[3].title}
+            />
+          )}
+        </SplideSlide>
+        {/* <SplideSlide>
+          {images && (
+            <img
+              className="slide"
+              src={urlFor(images[4].image).url()}
+              alt={images[4].title}
+            />
+          )}
+        </SplideSlide> */}
       </Splide>
     </div>
   );
