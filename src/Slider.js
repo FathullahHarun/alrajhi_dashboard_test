@@ -84,7 +84,7 @@ const Slider = () => {
             />
           )}
         </SplideSlide>
-        {/* <SplideSlide>
+        <SplideSlide>
           {images && (
             <img
               className="slide"
@@ -92,7 +92,7 @@ const Slider = () => {
               alt={images[4].title}
             />
           )}
-        </SplideSlide> */}
+        </SplideSlide>
       </Splide>
     </div>
   );
